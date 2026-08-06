@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramses II</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/Tutankhamun_style.css" />
+  </head>
+  <body>
+    <!-- NEW NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../../index.html">
+      <div class="brand">
+        <span class="eye-icon">𓂀</span>
+      </div>
+      <span>EGYPTIAN MUSEUM</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../tarek/museum.html">Museum</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../rahmaaaaaaaaaaaaaaaaaaaaaaa/egypt explore/time line.html">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../akram/Tutankhamun_page/quiz.html">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../akram/Tutankhamun_page/contact_us.html">Contact Us</a></li>
+      </ul>
+
+     
+
+        <!-- معلومات المستخدم المسجل (الاسم على اليمين ثم زر Logout) -->
+        <div id="userInfo" class="d-none align-items-center gap-2">
+          <span class="text-warning fw-bold d-flex align-items-center gap-1 ms-2">
+            <i class="bi bi-person-fill fs-5"></i>
+            <span id="userNameDisplay"></span>
+          </span>
+          <button id="logoutBtn" class="btn btn-outline-danger btn-sm px-2">Logout</button>
+        </div>
+      </div>
+
+    </div>
+  
+</nav>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main class="main-section px-3 px-md-5">
+      <div class="container-lg">
+        <!-- Back Link -->
+        <a
+          href="pharos.html"
+          class="back-link text-decoration-none d-inline-flex align-items-center mb-3"
+        >
+          <i class="fa-solid fa-chevron-left me-2"></i> Back to Pharaohs
+        </a>
+
+        <!-- Header Title -->
+        <div class="text-center mb-4 position-relative">
+          <h1 class="main-title text-uppercase fw-bold m-0">
+           Ramses II
+          </h1>
+          <div class="title-divider">
+            <span class="divider-line"></span>
+            <i class="fa-solid fa-crown divider-icon"></i>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="row g-4 align-items-center">
+          <!-- Left Side: Image Container -->
+          <div class="col-lg-5 col-md-6 text-center">
+            <div
+              class="img-wrapper position-relative rounded-4 overflow-hidden mb-3 shadow-sm"
+            >
+              <img
+                src="images/3033.webp"
+                class="img-fluid artifact-img"
+                alt="Golden Mask of Tutankhamun"
+              />
+            </div>
+
+            <!-- 3D View Button -->
+            <button class="btn btn-dark btn-3d rounded-3 px-4 py-2 mt-1 w-100">
+              <i class="fa-solid fa-cube me-2 gold-icon"></i> VIEW IN 3D
+            </button>
+          </div>
+
+          <!-- Right Side: Details & Description -->
+          <div class="col-lg-7 col-md-6">
+            <!-- Info Card -->
+            <div class="info-card p-4 rounded-4 mb-3 shadow-sm">
+              <ul class="list-unstyled details-list mb-3">
+                <li>
+                  <i class="fa-solid fa-scroll icon-gold me-2"></i>
+                  <strong>Dynasty:</strong> 19th Dynasty
+                </li>
+                <li>
+                  <i class="fa-solid fa-hourglass-half icon-gold me-2"></i>
+                  <strong>Period:</strong> New Kingdom
+                </li>
+                <li>
+                  <i class="fa-solid fa-calendar-days icon-gold me-2"></i>
+                  <strong>Date:</strong> c.1213 BC 
+                </li>
+                <li>
+                  <i class="fa-solid fa-gem icon-gold me-2"></i>
+                  <strong>Material:</strong> Red Granite / Limestone
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-dot icon-gold me-2"></i>
+                  <strong>Found in:</strong>   Abu Simbel / Theban Necropolis
+                </li>
+              </ul>
+
+              <hr class="card-divider" />
+
+              <h5 class="section-subtitle fw-bold text-uppercase mt-3 mb-2">
+                Description
+              </h5>
+              <p class="description-text mb-0">
+              Ramesses II, commonly known as Ramesses the Great, was the third pharaoh of the Nineteenth Dynasty. Often regarded as the most celebrated and powerful pharaoh of the New Kingdom, his monumental reign built legendary structures like the temples of Abu Simbel
+              </p>
+            </div>
+
+            <!-- Did You Know Box -->
+            <div
+              class="fact-card p-3 rounded-4 d-flex align-items-center gap-3 shadow-sm"
+            >
+              <div class="fact-icon-wrapper rounded-circle p-3 d-flex align-items-center justify-content-center">
+                <i class="fa-regular fa-lightbulb fs-4 gold-icon"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1 text-uppercase">Did You Know?</h6>
+                <p class="mb-0 text-muted small">
+                  The mask weighs about 10.23 kg of solid gold!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="custom-footer py-4 text-center mt-auto">
+      <div class="container">
+        <hr class="gold-divider mb-4" />
+        <div class="footer-logo mb-2">
+          <span class="eye-icon">𓂀</span>
+          <span class="gold-text fw-bold ms-2">EGYPTIAN MUSEUM</span>
+        </div>
+        <p class="footer-text mb-0">
+          © 2026 EGYPTIAN MUSEUM. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+<script src="../akram/Tutankhamun_page/js/navbar.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
