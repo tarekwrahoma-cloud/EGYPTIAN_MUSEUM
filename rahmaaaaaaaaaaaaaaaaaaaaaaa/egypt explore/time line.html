@@ -1,0 +1,170 @@
+<html>
+    <head>
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../../index.html">
+      <div class="brand">
+        <span class="eye-icon">𓂀</span>
+      </div>
+      <span>EGYPTIAN MUSEUM</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../tarek/museum.html">Museum</a></li>
+        <li class="nav-item"><a class="nav-link" href="time line.html">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../abdallh/project/map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../akram/Tutankhamun_page/quiz.html">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../abdallh/project/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../akram/Tutankhamun_page/contact_us.html">Contact Us</a></li>
+      </ul>
+
+     
+
+        <!-- معلومات المستخدم المسجل (الاسم على اليمين ثم زر Logout) -->
+        <div id="userInfo" class="d-none align-items-center gap-2">
+          <span class="text-warning fw-bold d-flex align-items-center gap-1 ms-2">
+            <i class="bi bi-person-fill fs-5"></i>
+            <span id="userNameDisplay"></span>
+          </span>
+          <button id="logoutBtn" class="btn btn-outline-danger btn-sm px-2">Logout</button>
+        </div>
+      </div>
+
+    </div>
+  
+</nav>
+
+<section class="historical-timeline">
+<h1>HISTORICAL TIMELINE</h1>
+</section>
+
+
+<section class="timeline-section container text-center py-5">
+  <div class="timeline-header mb-5">
+    <h2 class="fw-bold tracking-wide">HISTORICAL TIMELINE</h2>
+    <div class="ankh-icon text-warning fs-4 mt-4 mb-2 fw-bold">𓋹</div>
+    <p class="text-muted mt-3">Explore the main periods of ancient Egypt</p>
+  </div>
+
+  
+<!-- Timeline Bar Container -->
+  <div class="timeline-container d-flex align-items-center justify-content-center position-relative mb-5 mx-auto" style="max-width: 1000px;">
+    
+    <button class="nav-btn prev-btn mt-5 btn btn-warning rounded-circle text-white fw-bold"> < </button>
+    
+    <div class="timeline-track d-flex justify-content-between align-items-center w-100 mt-5 position-relative px-4">
+      <div class="timeline-line position-absolute top-50 start-0 w-100 bg-warning" style="height: 3px; z-index: 1;"></div>
+      
+      <!-- Timeline Points -->
+      <div class="timeline-item active position-relative d-flex flex-column align-items-center" role="button" data-target="period-1" style="z-index: 2;">
+        <span class="year position-absolute fw-bold text-secondary small" style="top: -30px; white-space: nowrap;">3100 BC</span>
+        <div class="node rounded-circle bg-light border border-3 border-warning" style="width: 12px; height: 12px;"></div>
+        <span class="label position-absolute fw-bold text-secondary small" style="bottom: -35px; white-space: nowrap; letter-spacing: 1px;">UNIFIED EGYPT</span>
+      </div>
+
+      <div class="timeline-item position-relative d-flex flex-column align-items-center" role="button" data-target="period-2" style="z-index: 2;">
+  
+        <span class="year position-absolute fw-bold text-secondary small" style="top: -30px; white-space: nowrap;">2686 -2181 BC</span>
+     <div class="node rounded-circle bg-light border border-3 border-warning" style="width: 12px; height: 12px;"></div>
+  <span class="label position-absolute fw-bold text-secondary small" style="bottom: -35px; white-space: nowrap; letter-spacing: 1px;">OLD KINGDOM</span>
+      </div>
+
+      <div class="timeline-item position-relative d-flex flex-column align-items-center" role="button" data-target="period-3" style="z-index: 2;">
+       
+        <span class="year position-absolute fw-bold text-secondary small" style="top: -30px; white-space: nowrap;">2055 -1650 BC</span>
+       
+ <div class="node rounded-circle bg-light border border-3 border-warning" style="width: 12px; height: 12px;"></div>
+        
+ <span class="label position-absolute fw-bold text-secondary small" style="bottom: -35px; white-space: nowrap; letter-spacing: 1px;">MIDDLE KINGDOM</span>
+      </div>
+
+      <div class="timeline-item position-relative d-flex flex-column align-items-center" role="button" data-target="period-4" style="z-index: 2;">
+        
+        <span class="year position-absolute fw-bold text-secondary small" style="top: -30px; white-space: nowrap;">1550 -1070 BC</span>
+        <div class="node rounded-circle bg-light border border-3 border-warning" style="width: 12px; height: 12px;"></div>
+        <span class="label position-absolute fw-bold text-secondary small" style="bottom: -35px; white-space: nowrap; letter-spacing: 1px;">NEW KINGDOM</span>
+      </div>
+
+      <div class="timeline-item position-relative d-flex flex-column align-items-center" role="button" data-target="period-5" style="z-index: 2;">
+        <span class="year position-absolute fw-bold text-secondary small" style="top: -30px; white-space: nowrap;">332 -30 BC</span>
+        <div class="node rounded-circle bg-light border border-3 border-warning" style="width: 12px; height: 12px;"></div>
+        <span class="label position-absolute fw-bold text-secondary small" style="bottom: -35px; white-space: nowrap; letter-spacing: 1px;">PTOLEMAIC EGYPT</span>
+      </div>
+
+      <div class="timeline-item position-relative d-flex flex-column align-items-center" role="button" data-target="period-6" style="z-index: 2;">
+        <span class="year position-absolute fw-bold text-secondary small" style="top: -30px; white-space: nowrap;">30 BC -395 AD</span>
+        <div class="node rounded-circle bg-light border border-3 border-warning" style="width: 12px; height: 12px;"></div>
+        <span class="label position-absolute fw-bold text-secondary small" style="bottom: -35px; white-space: nowrap; letter-spacing: 1px;">ROMAN EGYPT</span>
+      </div>
+    </div>
+
+    <button class="nav-btn next-btn btn btn-warning rounded-circle mt-5 text-white fw-bold"> > </button>
+  </div>
+
+
+  <!-- Content Card Box -->
+  <div class="content-card-container border border-warning rounded-3 p-4 mx-auto shadow-sm" style="max-width: 700px;">
+    <div id="period-1" class="period-content active">
+      <h3 class="text-warning fs-5 fw-bold mb-3">Unified Egypt (3100 BC)</h3>
+      <p class="text-secondary mb-0">The unification of Upper and Lower Egypt under the first pharaoh, marking the beginning of Egyptian dynastic history.</p>
+    </div>
+
+    <div id="period-2" class="period-content d-none">
+      <h3 class="text-warning fs-5 fw-bold mb-3">Old Kingdom (2686–2181 BC)</h3>
+      <p class="text-secondary mb-0">Known as the "Age of the Pyramids," this era featured monumental architecture like the Giza Pyramids and a strong centralized state.</p>
+    </div>
+
+    <div id="period-3" class="period-content d-none">
+      <h3 class="text-warning fs-5 fw-bold mb-3">Middle Kingdom (2055–1650 BC)</h3>
+      <p class="text-secondary mb-0">A period of reunification following political fragmentation, renowned for advances in arts, literature, and architectural refinement.</p>
+    </div>
+
+    <div id="period-4" class="period-content d-none">
+      <h3 class="text-warning fs-5 fw-bold mb-3">New Kingdom (1550–1070 BC)</h3>
+      <p class="text-secondary mb-0">The New Kingdom was the most prosperous period of ancient Egypt. Egypt expanded its territory and built magnificent temples.</p>
+    </div>
+
+    <div id="period-5" class="period-content d-none">
+      <h3 class="text-warning fs-5 fw-bold mb-3">Ptolemaic Egypt (332–30 BC)</h3>
+      <p class="text-secondary mb-0">Begun by Alexander the Great's general Ptolemy, this era blended Greek and Egyptian cultures, ending with Cleopatra VII.</p>
+    </div>
+
+    <div id="period-6" class="period-content d-none">
+      <h3 class="text-warning fs-5 fw-bold mb-3">Roman Egypt (30 BC–395 AD)</h3>
+      <p class="text-secondary mb-0">Egypt became a vital grain-supplying province of the Roman Empire, transitioning culturally through Roman and later Byzantine rules.</p>
+    </div>
+  </div>
+  
+
+</section>
+
+
+
+
+
+
+
+
+<script src="../../akram/Tutankhamun_page/js/navbar.js"></script>
+<script src="JS/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+    </body>
+</html>

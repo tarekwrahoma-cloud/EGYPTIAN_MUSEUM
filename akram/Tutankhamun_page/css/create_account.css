@@ -1,0 +1,90 @@
+/* ==========================================
+   Create Account Form Styles
+   ========================================== */
+
+/* حاوية الصفحة للتأكد من توسيط الاستمارة مع مراعاة الهيدر والفوتر */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0d0f12; 
+   color: #f4f4f4; 
+  padding-top: 100px; 
+}
+
+/* تنسيق استمارة التسجيل */
+.auth-form {
+  max-width: 450px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 35px 30px;
+  background-color: #16191e;
+  border: 1px solid #c5a059; /* إطار باللون الذهبي */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+              0 0 15px rgba(197, 160, 89, 0.15); /* إضاءة خفيفة باللون الذهبي */
+}
+
+/* عنوان الاستمارة */
+.auth-form h2 {
+  color: #c5a059;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* التسميات (Labels) */
+.auth-form .form-label {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* حقول الإدخال (Inputs) */
+.auth-form .form-control {
+  background-color: #0d0f12;
+  border: 1px solid #333942;
+  color: #ffffff;
+  padding: 12px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* تأثير عند التركيز داخل الحقل */
+.auth-form .form-control:focus {
+  background-color: #090a0c;
+  border-color: #c5a059;
+  box-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
+  color: #ffffff;
+}
+
+/* الزر الذهبي الخاص بالتسجيل */
+.auth-form .btn-gold {
+  background-color: #c5a059;
+  color: #0d0f12;
+  font-weight: 700;
+  padding: 12px;
+  border: 1px solid #c5a059;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+/* تأثير التمرير فوق الزر */
+.auth-form .btn-gold:hover {
+  background-color: #d4af37;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+  transform: translateY(-1px);
+}
+
+/* تنبيه الخطأ أو النجاح */
+.auth-form .alert {
+  margin-top: 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
