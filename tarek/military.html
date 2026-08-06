@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Military Campaigns — Egyptian Museum</title>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/military.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR GOES HERE: replace this div with the shared <header> component -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../index.html">
+      <div class="brand">
+        <span class="eye-icon">𓂀</span>
+      </div>
+      <span>EGYPTIAN MUSEUM</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="museum.html">Museum</a></li>
+        <li class="nav-item"><a class="nav-link" href="../rahmaaaaaaaaaaaaaaaaaaaaaaa/egypt explore/time line.html">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="../abdallh/project/map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="../akram/Tutankhamun_page/quiz.html">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="../abdallh/project/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../akram/Tutankhamun_page/contact_us.html">Contact Us</a></li>
+      </ul>
+
+     
+
+        <!-- معلومات المستخدم المسجل (الاسم على اليمين ثم زر Logout) -->
+        <div id="userInfo" class="d-none align-items-center gap-2">
+          <span class="text-warning fw-bold d-flex align-items-center gap-1 ms-2">
+            <i class="bi bi-person-fill fs-5"></i>
+            <span id="userNameDisplay"></span>
+          </span>
+          <button id="logoutBtn" class="btn btn-outline-danger btn-sm px-2">Logout</button>
+        </div>
+      </div>
+
+    </div>
+  
+</nav>
+
+<section>
+
+  <div class="page-head">
+    <div class="eyebrow py-5" style="color:var(--gold-dark);">MILITARY HISTORY</div>
+    <h1>WARS THAT SHAPED EGYPT</h1>
+    <div class="divider"><span class="line"></span><span class="sun">☀</span><span class="line"></span></div>
+    <p>
+      From the first unification of the Two Lands to the last great stand of the New Kingdom —
+      six campaigns that built, defended, and redrew the borders of ancient Egypt.
+    </p>
+  </div>
+
+  <div class="war-grid text-center">
+
+    <div class="war-card ">
+      <div class="war-img">
+        <div class="war-num">1</div>
+        <div class="war-era-badge">c. 3100 BC</div>
+        <img src="31.jpeg" alt="Unification of Egypt under Narmer">
+      </div>
+      <div class="war-body">
+        <h3 class="war-title">Unification of Egypt</h3>
+        <div class="war-commander"><span class="ic">𓋹</span> King Narmer (Menes)</div>
+        <p class="war-desc">
+          The campaign that created Egypt itself. Narmer, ruler of Upper Egypt, conquered the
+          northern Delta kingdoms and merged Upper and Lower Egypt into a single state — the
+          founding act of the Egyptian civilization and its first dynasty.
+        </p>
+      </div>
+    </div>
+
+    <div class="war-card">
+      <div class="war-img">
+        <div class="war-num">2</div>
+        <div class="war-era-badge">c. 1550 BC</div>
+        <img src="32.jpeg" alt="War to expel the Hyksos">
+      </div>
+      <div class="war-body">
+        <h3 class="war-title">The War to Expel the Hyksos</h3>
+        <div class="war-commander"><span class="ic">𓋹</span> Ahmose I</div>
+        <p class="war-desc">
+          After nearly a century of Hyksos rule over the Delta, the liberation war begun by
+          Seqenenre Tao and carried on by Kamose was completed by Ahmose I, who besieged their
+          capital Avaris and drove them out of Egypt for good, founding the New Kingdom.
+        </p>
+      </div>
+    </div>
+
+    <div class="war-card">
+      <div class="war-img">
+        <div class="war-num">3</div>
+        <div class="war-era-badge">c. 1457 BC</div>
+        <img src="33.jpeg" alt="Battle of Megiddo">
+      </div>
+      <div class="war-body">
+        <h3 class="war-title">The Battle of Megiddo</h3>
+        <div class="war-commander"><span class="ic">𓋹</span> Thutmose III</div>
+        <p class="war-desc">
+          Facing a Levantine coalition at Megiddo, Thutmose III gambled on a narrow mountain
+          pass to catch his enemies off guard. The surprise attack broke the rebellion and
+          earned him a reputation as one of history's most brilliant military strategists.
+        </p>
+      </div>
+    </div>
+
+    <div class="war-card">
+      <div class="war-img">
+        <div class="war-num">4</div>
+        <div class="war-era-badge">c. 1274 BC</div>
+        <img src="34.jpeg" alt="Battle of Kadesh">
+      </div>
+      <div class="war-body">
+        <h3 class="war-title">The Battle of Kadesh</h3>
+        <div class="war-commander"><span class="ic">𓋹</span> Ramesses II</div>
+        <p class="war-desc">
+          One of the largest chariot battles ever fought. Ramesses II was nearly trapped by
+          the Hittites but rallied his army to survive the ambush — a clash that later
+          produced history's oldest known peace treaty.
+        </p>
+      </div>
+    </div>
+
+    <div class="war-card">
+      <div class="war-img">
+        <div class="war-num">5</div>
+        <div class="war-era-badge">c. 1208 BC</div>
+        <img src="35.jpeg" alt="Merneptah's Libyan war">
+      </div>
+      <div class="war-body">
+        <h3 class="war-title">Merneptah's Libyan War</h3>
+        <div class="war-commander"><span class="ic">𓋹</span> Merneptah</div>
+        <p class="war-desc">
+          When Libyan forces and allied raiders pushed into the western Delta, Merneptah met
+          and crushed them in a decisive battle. He commemorated the victory on a stone stela
+          that holds the earliest known reference to Israel.
+        </p>
+      </div>
+    </div>
+
+    <div class="war-card">
+      <div class="war-img">
+        <div class="war-num">6</div>
+        <div class="war-era-badge">c. 1178 BC</div>
+        <img src="36.jpeg" alt="War against the Sea Peoples">
+      </div>
+      <div class="war-body">
+        <h3 class="war-title">War Against the Sea Peoples</h3>
+        <div class="war-commander"><span class="ic">𓋹</span> Ramesses III</div>
+        <p class="war-desc">
+          As the Sea Peoples toppled empires across the Mediterranean, Ramesses III lured
+          their fleet into the Nile Delta and destroyed it with a coordinated ambush of ships
+          and shore archers — saving Egypt from the collapse that ended the Bronze Age.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="../akram/Tutankhamun_page/js/navbar.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+</body>
+</html>

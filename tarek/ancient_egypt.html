@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ancient Egypt Documentaries | Virtual Egypt Museum</title>
+  
+  <!-- CSS External Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --bg:#14110d;
+      --card:#221b12;
+      --ink:#ece2c9;
+      --ink-dim:#a99d80;
+      --gold:#C8A24D;
+      --gold-hover:#D4AF37;
+      --gold-bright:#e8c976;
+      --line:#3a2f1f;
+    }
+    
+    h1, h2, h3, h4, .navbar-brand, .eyebrow {
+      font-family: 'Cinzel', serif;
+    }
+
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Poppins', sans-serif;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      padding-top: 90px;
+    }
+
+    /* Navbar Styles */
+    .custom-navbar {
+      background: rgba(20, 17, 13, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(200, 162, 77, 0.25);
+      padding: 15px 0;
+    }
+
+    .gold-text { color: var(--gold) !important; }
+    .gold-bright { color: var(--gold-bright) !important; }
+    .gold-icon { color: var(--gold); }
+    .eye-icon { color: var(--gold); font-size: 1.4rem; }
+
+    .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.85) !important;
+      font-size: 0.95rem;
+      margin: 0 8px;
+    }
+
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      color: var(--gold-hover) !important;
+    }
+
+    .btn-outline-gold {
+      background-color: transparent;
+      color: #c5a059;
+      border: 1px solid #c5a059;
+    }
+
+    .eyebrow { letter-spacing: .25em; font-size: .85rem; color: var(--gold); text-transform: uppercase; }
+    
+    /* Video Cards Styles */
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .video-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    footer { 
+      background: #0f0c09; 
+      color: var(--ink-dim); 
+      text-align: center; 
+      padding: 1.5rem 0; 
+      font-size: .85rem; 
+      margin-top: auto; 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR SECTION -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../index.html ">
+        <div class="brand">
+          <span class="eye-icon">𓂀</span>
+        </div>
+        <span>EGYPTIAN MUSEUM</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="museum.html">Museum</a></li>
+          <li class="nav-item"><a class="nav-link" href="../rahmaaaaaaaaaaaaaaaaaaaaaaa/egypt explore/time line.html">Timeline</a></li>
+          <li class="nav-item"><a class="nav-link" href="../abdallh/project/map.html">Map</a></li>
+          <li class="nav-item"><a class="nav-link" href="../akram/Tutankhamun_page/quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="../abdallh/project/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../akram/Tutankhamun_page/contact_us.html">Contact Us</a></li>
+        </ul>
+
+        <div id="userInfo" class="d-none align-items-center gap-2">
+          <span class="gold-text fw-bold d-flex align-items-center gap-1 ms-2">
+            <i class="bi bi-person-fill fs-5 gold-icon"></i>
+            <span id="userNameDisplay"></span>
+          </span>
+          <button id="logoutBtn" class="btn btn-outline-gold btn-sm px-2">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT SECTION -->
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Page Title -->
+      <div class="text-center mb-5">
+        <p class="eyebrow">Documentary Library</p>
+        <h1>Ancient Egypt</h1>
+        <p class="text-muted">Discover life, architectural wonders, and daily history in ancient Egypt through short films.</p>
+      </div>
+
+      <!-- Videos Grid -->
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Video 1: Everyday Life in Ancient Egypt -->
+        <div class="col-lg-6">
+          <div class="video-card">
+            <div class="ratio ratio-16x9 rounded overflow-hidden mb-3 border border-secondary">
+              <iframe src="vedio1.mp4" title="Life in Ancient Egypt" allowfullscreen></iframe>
+            </div>
+            <h3 class="h5 gold-bright text-center mb-2">Life in Ancient Egypt</h3>
+            <p class="small text-muted text-center mb-0">Explore how ordinary Egyptians lived, worked, and thrived along the Nile.</p>
+          </div>
+        </div>
+
+        <!-- Video 2: The Wonders & Pyramids -->
+        <div class="col-md-6 col-lg-6">
+          <div class="video-card">
+            <div class="ratio ratio-16x9 rounded overflow-hidden mb-3 border border-secondary">
+              <iframe src="vedio2.mp4" title="Wonders of Ancient Egypt" allowfullscreen></iframe>
+            </div>
+            <h3 class="h5 gold-bright text-center mb-2">Wonders of the Pharaohs</h3>
+            <p class="small text-muted text-center mb-0">Uncover the monumental engineering and rich culture of Egyptian civilization.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="custom-footer py-4 text-center mt-auto">
+      <div class="container">
+        <hr class="gold-divider mb-4" />
+        <div class="footer-logo mb-2">
+          <span class="eye-icon">𓂀</span>
+          <span class="gold-text fw-bold ms-2">EGYPTIAN MUSEUM</span>
+        </div>
+        <p class="footer-text mb-0">
+          © 2026 EGYPTIAN MUSEUM. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="../akram/Tutankhamun_page/js/navbar.js"></script>
+</body>
+</html>
