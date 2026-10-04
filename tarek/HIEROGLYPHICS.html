@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egyptian Hieroglyphs | Virtual Egypt Museum</title>
+  
+  <!-- CSS External Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cairo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #14110D;
+      --gold: #C8A24D;
+      --gold-hover: #D4AF37;
+      
+      --bg:#14110d;
+      --bg-alt:#1c1710;
+      --card:#221b12;
+      --ink:#ece2c9;
+      --ink-dim:#a99d80;
+      --gold-bright:#e8c976;
+      --line:#3a2f1f;
+    }
+    
+    h1, h2, h3, .main-title, .navbar-brand, .footer-logo, .eyebrow {
+      font-family: 'Cinzel', serif;
+    }
+
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Poppins', sans-serif;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      padding-top: 90px;
+    }
+
+    /* Navbar Styles */
+    .custom-navbar {
+      background: rgba(20, 17, 13, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(200, 162, 77, 0.25);
+      padding: 15px 0;
+    }
+
+    .gold-text { color: var(--gold) !important; }
+    .gold-icon { color: var(--gold); transition: color 0.2s ease, transform 0.2s ease; }
+    .eye-icon { color: var(--gold); font-size: 1.4rem; }
+
+    .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.85) !important;
+      font-size: 0.95rem;
+      margin: 0 8px;
+      transition: color 0.2s ease;
+    }
+
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      color: var(--gold-hover) !important;
+    }
+
+    .btn-gold {
+      background-color: #c5a059;
+      color: #000;
+      border: 1px solid #c5a059;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .btn-gold:hover {
+      background-color: #e0b969;
+      color: #000;
+    }
+
+    .btn-outline-gold {
+      background-color: transparent;
+      color: #c5a059;
+      border: 1px solid #c5a059;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-gold:hover {
+      background-color: #c5a059;
+      color: #000;
+    }
+
+    /* Sections Styles */
+    .eyebrow { letter-spacing: .25em; font-size: .85rem; color: var(--gold); text-transform: uppercase; }
+    section { padding: 3rem 0; }
+    
+    .translator { 
+      background: var(--bg-alt); 
+      border-top: 1px solid var(--line); 
+      border-bottom: 1px solid var(--line); 
+    }
+    .translator-box { 
+      background: var(--card); 
+      border: 1px solid var(--line); 
+      border-radius: 10px; 
+      padding: 2rem; 
+    }
+    .translator-box input { 
+      background: #120f0a; 
+      border: 1px solid var(--line); 
+      color: var(--ink); 
+      border-radius: 6px; 
+      padding: .8rem 1rem; 
+      font-size: 1.05rem; 
+    }
+    .translator-box input:focus { 
+      background: #120f0a; 
+      color: var(--ink); 
+      border-color: var(--gold); 
+      outline: none; 
+      box-shadow: 0 0 0 3px rgba(200, 162, 77, 0.2); 
+    }
+
+    .cartouche-wrap { display: flex; justify-content: center; padding: 2rem 1rem; min-height: 120px; align-items: center; }
+    .cartouche-empty { color: var(--ink-dim); font-size: .95rem; }
+    
+    .cartouche-border {
+      border: 3px solid var(--gold);
+      border-right: 8px solid var(--gold);
+      border-radius: 35px;
+      padding: 12px 35px;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px rgba(200, 162, 77, 0.2);
+    }
+    .cartouche-text { font-size: 2.5rem; color: var(--gold-hover); letter-spacing: 6px; line-height: 1; }
+
+    /* Image Cards Section Styles */
+    .gallery-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      height: 100%;
+    }
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-card-body {
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .gallery-card-body h3 {
+      font-size: 1.1rem;
+      color: var(--gold-bright);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Style for Paragraph below images */
+    .gallery-description {
+      background: rgba(34, 27, 18, 0.6);
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 1.8rem;
+      color: var(--ink-dim);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 2.5rem auto 0 auto;
+    }
+
+    .alphabet-key { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: .5rem; margin-top: 1.5rem; }
+    .key-cell { background: #120f0a; border: 1px solid var(--line); border-radius: 6px; text-align: center; padding: .4rem .2rem; }
+    .key-cell .g { font-size: 1.4rem; color: var(--gold-hover); display: block; }
+    .key-cell .l { font-size: .75rem; color: var(--ink-dim); display: block; }
+    
+    .note { font-size: .85rem; color: var(--ink-dim); border-left: 2px solid var(--gold); padding-left: .9rem; margin-top: 1.5rem; }
+    footer { background: #0f0c09; color: var(--ink-dim); text-align: center; padding: 1.5rem 0; font-size: .85rem; margin-top: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR SECTION -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../index.html">
+        <div class="brand">
+          <span class="eye-icon">𓂀</span>
+        </div>
+        <span>EGYPTIAN MUSEUM</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="museum.html">Museum</a></li>
+          <li class="nav-item"><a class="nav-link" href="../rahmaaaaaaaaaaaaaaaaaaaaaaa/egypt explore/time line.html">Timeline</a></li>
+          <li class="nav-item"><a class="nav-link" href="../abdallh/project/map.html">Map</a></li>
+          <li class="nav-item"><a class="nav-link" href="../akram/Tutankhamun_page/quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="../abdallh/project/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../akram/Tutankhamun_page/contact_us.html">Contact Us</a></li>
+        </ul>
+
+        <div id="userInfo" class="d-none align-items-center gap-2">
+          <span class="gold-text fw-bold d-flex align-items-center gap-1 ms-2">
+            <i class="bi bi-person-fill fs-5 gold-icon"></i>
+            <span id="userNameDisplay"></span>
+          </span>
+          <button id="logoutBtn" class="btn btn-outline-gold btn-sm px-2">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="text-center pt-4">
+    <div class="container">
+      <p class="eyebrow">Ancient Egyptian Civilization</p>
+      <h1>Egyptian Hieroglyphs</h1>
+    </div>
+  </section>
+
+  <!-- SECTION: 3 DIVS WITH IMAGES & PARAGRAPH BELOW -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Div 1 -->
+        <div class="col-md-4">
+          <div class="gallery-card">
+            <img src="41.jpeg" alt="Rosetta Stone">
+            <div class="gallery-card-body">
+              <h3>Rosetta Stone</h3>
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- Div 2 -->
+        <div class="col-md-4">
+          <div class="gallery-card">
+            <img src="42.jpeg" alt="Papyrus Scrolls">
+            <div class="gallery-card-body">
+              <h3>Papyrus</h3>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Div 3 -->
+        <div class="col-md-4">
+          <div class="gallery-card">
+            <img src="43.jpeg" alt="Temple Walls">
+            <div class="gallery-card-body">
+              <h3>Hieroglyphs ON THE WALL</h3>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARAGRAPH BELOW IMAGES -->
+      <div class="gallery-description text-center">
+        Hieroglyphs were more than just a writing system; they were considered the language of the gods (Medu Netjer). Used primarily for monumental inscriptions, royal decrees, and sacred texts, each symbol carries rich historical meaning combining sounds, concepts, and artistic beauty.
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSLATOR SECTION -->
+  <section class="translator">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="eyebrow">Try It Yourself</p>
+        <h2>Hieroglyph Translator</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="translator-box">
+            <div class="row g-2">
+              <div class="col-9">
+                <input type="text" id="wordInput" class="form-control" placeholder="Type here... e.g. shahd" autocomplete="off">
+              </div>
+              <div class="col-3">
+                <button class="btn btn-gold w-100" id="translateBtn" type="button">Translate</button>
+              </div>
+            </div>
+
+            <!-- Cartouche Output -->
+            <div class="cartouche-wrap" id="cartoucheWrap">
+              <span class="cartouche-empty">Your name will appear here in hieroglyphs</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="eyebrow mb-3">Alphabet Key</p>
+            <div class="alphabet-key" id="alphabetKey"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="custom-footer py-4 text-center mt-auto">
+      <div class="container">
+        <hr class="gold-divider mb-4" />
+        <div class="footer-logo mb-2">
+          <span class="eye-icon">𓂀</span>
+          <span class="gold-text fw-bold ms-2">EGYPTIAN MUSEUM</span>
+        </div>
+        <p class="footer-text mb-0">
+          © 2026 EGYPTIAN MUSEUM. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Logic -->
+  <script>
+    (function() {
+      const enMap = {
+        'A':'𓄿', 'B':'𓃀', 'C':'𓎡', 'D':'𓂧', 'E':'𓇋', 'F':'𓆑', 'G':'𓎼', 'H':'𓎛', 'I':'𓇋',
+        'J':'𓆓', 'K':'𓎡', 'L':'𓃭', 'M':'𓅓', 'N':'𓈗', 'O':'𓍯', 'P':'𓊪', 'Q':'𓐐', 'R':'𓂋',
+        'S':'𓋴', 'T':'𓏏', 'U':'𓅱', 'V':'𓆑', 'W':'𓅱', 'X':'𓎡𓋴', 'Y':'𓄭', 'Z':'𓊃'
+      };
+
+      const arMap = {
+        'ا':'𓄿','أ':'𓄿','إ':'𓄿','آ':'𓄿','ء':'𓄿','ئ':'𓇋','ؤ':'𓅱',
+        'ب':'𓃀','ت':'𓏏','ث':'𓋴','ج':'𓆓','ح':'𓎛','خ':'𓎡',
+        'د':'𓂧','ذ':'𓂧','ر':'𓂋','ز':'𓊃','س':'𓋴','ش':'𓋴',
+        'ص':'𓋴','ض':'𓂧','ط':'𓏏','ظ':'𓂧','ع':'𓄿','غ':'𓎼',
+        'ف':'𓆑','ق':'𓐐','ك':'𓎡','ل':'𓃭','م':'𓅓','ن':'𓈗',
+        'ه':'𓎛','ة':'𓏏','و':'𓅱','ي':'𓇋','ى':'𓄭'
+      };
+
+      function renderKey() {
+        const keyEl = document.getElementById('alphabetKey');
+        if (!keyEl) return;
+        keyEl.innerHTML = '';
+        Object.keys(enMap).forEach(letter => {
+          if (letter === 'X') return;
+          const cell = document.createElement('div');
+          cell.className = 'key-cell';
+          cell.innerHTML = `<span class="g">${enMap[letter]}</span><span class="l">${letter}</span>`;
+          keyEl.appendChild(cell);
+        });
+      }
+
+      function translateText(text) {
+        let result = '';
+        for (let char of text) {
+          if (char === ' ') { result += '  '; continue; }
+          const upper = char.toUpperCase();
+          if (enMap[upper]) { result += enMap[upper]; }
+          else if (arMap[char]) { result += arMap[char]; }
+        }
+        return result;
+      }
+
+      function updateOutput() {
+        const input = document.getElementById('wordInput');
+        const wrap = document.getElementById('cartoucheWrap');
+        if (!input || !wrap) return;
+
+        const val = input.value.trim();
+        const translated = translateText(val);
+
+        if (translated === '') {
+          wrap.innerHTML = '<span class="cartouche-empty">Your name will appear here in hieroglyphs</span>';
+        } else {
+          wrap.innerHTML = '<div class="cartouche-border"><span class="cartouche-text">' + translated + '</span></div>';
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', function() {
+        renderKey();
+        const btn = document.getElementById('translateBtn');
+        const input = document.getElementById('wordInput');
+
+        if (btn) btn.onclick = updateOutput;
+        if (input) {
+          input.oninput = updateOutput;
+          input.onkeyup = updateOutput;
+        }
+      });
+    })();
+  </script>
+  <script src="../akram/Tutankhamun_page/js/navbar.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
