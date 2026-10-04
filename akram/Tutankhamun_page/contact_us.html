@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Museum - Contact Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../../index.html">
+      <div class="brand">
+        <span class="eye-icon">𓂀</span>
+      </div>
+      <span>EGYPTIAN MUSEUM</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../tarek/museum.html">Museum</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../rahmaaaaaaaaaaaaaaaaaaaaaaa/egypt explore/time line.html">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../abdallh/project/map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../abdallh/project/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+      </ul>
+
+     
+
+        <!-- معلومات المستخدم المسجل (الاسم على اليمين ثم زر Logout) -->
+        <div id="userInfo" class="d-none align-items-center gap-2">
+          <span class="text-warning fw-bold d-flex align-items-center gap-1 ms-2">
+            <i class="bi bi-person-fill fs-5"></i>
+            <span id="userNameDisplay"></span>
+          </span>
+          <button id="logoutBtn" class="btn btn-outline-danger btn-sm px-2">Logout</button>
+        </div>
+      </div>
+
+    </div>
+  
+</nav>
+
+<!-- PAGE: CONTACT US -->
+<section id="page-contact" class="page pt-5">
+  <div class="page-hero page-hero--contact">
+    <div class="page-hero__bg"></div>
+    <div class="container">
+      <p class="page-hero__eyebrow">We're Here For You</p>
+      <h1 class="page-hero__title">Contact Us</h1>
+      <p class="page-hero__sub">Our team is ready to assist your visit anytime ✦</p>
+    </div>
+  </div>
+
+  <div class="container contact-page">
+
+    <!-- Contact Info Cards -->
+    <div class="contact-info-grid">
+      <div class="contact-info-card">
+        <div class="contact-info-card__icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p>+20 (2) 25782448</p>
+        <p>+20 (2) 25782450</p>
+        <span>Available: 9 AM – 5 PM</span>
+      </div>
+      <div class="contact-info-card contact-info-card--featured">
+        <div class="contact-info-card__icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p>info@egyptianmuseum.gov.eg</p>
+        <p>support@egyptianmuseum.gov.eg</p>
+        <span>Response within 24 hours</span>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-card__icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>+20 100 000 0000</p>
+        <span>Available 24/7</span>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrap">
+      <div class="contact-form-card">
+        <div class="contact-form-card__left">
+          <h2>Send Us a Message</h2>
+          <p>Have a question about tickets, exhibitions, or tours? We'd love to help!</p>
+          
+          <div class="contact-social">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+
+          <div class="contact-faq">
+            <h4>Frequently Asked Questions</h4>
+            <details class="faq-item">
+              <summary>What are the museum opening hours?</summary>
+              <p>The museum is open daily from 9:00 AM to 5:00 PM. Ticket counters close at 4:00 PM.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How can I buy entry tickets?</summary>
+              <p>Tickets can be purchased online through our website or directly at the museum entrance.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Are photography passes allowed?</summary>
+              <p>Personal photography with phones is allowed. Professional cameras require a special permit at the ticket desk.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="contact-form-card__right">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Full Name <span class="req">*</span></label>
+                <input class="form-input" type="text" id="contactName" placeholder="John Doe" required />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address <span class="req">*</span></label>
+                <input class="form-input" type="email" id="contactEmail" placeholder="name@email.com" required />
+                <span class="form-error"></span>
+              </div>
+            </div>
+            <div class="form-group" id="contactPhoneGroup">
+              <label class="form-label" for="contactPhone">Phone Number</label>
+              <input class="form-input" type="tel" id="contactPhone" placeholder="+20 XXX XXX XXXX" />
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactSubject">Subject <span class="req">*</span></label>
+              <select class="form-input" id="contactSubject" required>
+                <option value="">Select a subject</option>
+                <option value="tickets">Ticket Booking & Pricing</option>
+                <option value="tours">Guided & Group Tours</option>
+                <option value="exhibitions">Exhibitions & Artifacts</option>
+                <option value="feedback">General Inquiry / Feedback</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Your Message <span class="req">*</span></label>
+              <textarea class="form-input form-textarea" id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+              <span class="form-error"></span>
+              <span class="char-counter" id="charCounter">0 / 500</span>
+            </div>
+            <button type="submit" class="btn btn--primary w-full" id="contactSubmitBtn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="custom-footer py-4 text-center mt-auto">
+  <div class="container">
+    <hr class="gold-divider mb-4" />
+    <div class="footer-logo mb-2">
+      <span class="eye-icon">𓂀</span>
+      <span class="gold-text fw-bold ms-2">EGYPTIAN MUSEUM</span>
+    </div>
+    <p class="footer-text mb-0">
+      © 2026 EGYPTIAN MUSEUM. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</html>

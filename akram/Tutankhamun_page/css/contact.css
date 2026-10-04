@@ -1,0 +1,382 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTACT PAGE STYLES
+   Designed for Egyptian Museum Theme (Dark & Gold)
+   Targeting: #page-contact
+══════════════════════════════════════════════════════════════════════════ */
+
+/* --- 1. Base Setup for this page --- */
+#page-contact {
+    background-color: #111111; /* خلفية الصفحة داكنة جداً */
+    color: #e0e0e0; /* لون نص فاتح ومريح للعين */
+    font-family: 'Poppins', sans-serif; /* الخط الافتراضي للنصوص */
+    min-height: 100vh;
+    padding-top: 100px; /* مسافة للخلفية بسبب النّاف بار الثابت */
+    padding-bottom: 80px;
+}
+
+/* التنسيق العام للعناوين في هذه الصفحة */
+#page-contact h1, 
+#page-contact h2, 
+#page-contact h3, 
+#page-contact h4 {
+    font-family: 'Playfair Display', serif; /* خط كلاسيكي للعناوين */
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* الألوان الذهبية والرموز الخاصة */
+.gold-text {
+    color: #cda434 !important; /* لون ذهبي ملكي */
+}
+
+.req {
+    color: #cda434; /* لون النجمة للمقولات المطلوبة */
+}
+
+/* --- 2. Page Hero (العنوان العلوي) --- */
+.page-hero--contact {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.page-hero__eyebrow {
+    color: #cda434; /* الذهبي */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-hero__title {
+    font-size: 4rem; /* حجم كبير للعنوان الرئيسي */
+    margin-bottom: 15px;
+}
+
+.page-hero__sub {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+}
+
+/* --- 3. Contact Info Cards (كروت البيانات الثلاثة) --- */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.contact-info-card {
+    background-color: #1a1a1a; /* خلفية الكارت أفتح قليلاً */
+    border: 1px solid #333; /* حد خارجي بسيط */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير التمرير (Hover) على الكروت العادية */
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+/* الكارت المميز (Featured) - الايميل في الكود الخاص بك */
+.contact-info-card--featured {
+    border-color: #cda434; /* حد ذهبي */
+    box-shadow: 0 10px 30px rgba(205, 164, 52, 0.15); /* توهج ذهبي ناعم */
+}
+
+.contact-info-card__icon {
+    font-size: 2.5rem;
+    color: #cda434; /* أيقونات ذهبية */
+    margin-bottom: 25px;
+}
+
+.contact-info-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-info-card p {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.contact-info-card span {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 15px;
+}
+
+/* --- 4. Contact Form Wrapper (القسم الكبير للنموذج) --- */
+.contact-form-wrap {
+    margin-top: 60px;
+}
+
+.contact-form-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 20px;
+    display: flex; /* تقسيم اليسار واليمين */
+    overflow: hidden;
+}
+
+/* القسم الأيسر (السوشيال والأسئلة) */
+.contact-form-card__left {
+    flex: 1;
+    padding: 60px;
+    border-right: 1px solid #333;
+}
+
+.contact-form-card__left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-form-card__left p {
+    color: #a0a0a0;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* السوشيال ميديا */
+.contact-social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #cda434; /* خلفية ذهبية عند التمرير */
+    color: #111;
+    border-color: #cda434;
+    transform: translateY(-3px);
+}
+
+/* قسم الأسئلة الشائعة (FAQ) */
+.contact-faq h4 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.faq-item summary {
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    list-style: none; /* إخفاء السهم الافتراضي */
+    position: relative;
+    padding-right: 30px;
+}
+
+/* إضافة سهم مخصص ذهبي */
+.faq-item summary::after {
+    content: '+'; /* رمز الفتح */
+    position: absolute;
+    right: 0;
+    color: #cda434;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    content: '-'; /* رمز الإغلاق */
+    transform: rotate(180deg);
+}
+
+.faq-item p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+/* --- 5. Contact Form Right (قسم حقول الإدخال) --- */
+.contact-form-card__right {
+    flex: 1.5; /* مساحة أكبر للحقول */
+    padding: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* تنسيق الصفوف (الاسم والايميل) */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.form-label {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* تنسيق حقول الإدخال (Inputs, Select, Textarea) */
+.form-input {
+    background-color: #111111; /* خلفية داكنة للحقل */
+    border: 1px solid #444; /* حد رمادي داكن */
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير التركيز (Focus) على الحقول */
+.form-input:focus {
+    outline: none;
+    border-color: #cda434; /* حد ذهبي */
+    box-shadow: 0 0 10px rgba(205, 164, 52, 0.1);
+}
+
+/* تنسيق الـ Placeholder */
+.form-input::placeholder {
+    color: #666;
+}
+
+/* تنسيق القائمة المنسدلة (Select) */
+select.form-input {
+    appearance: none; /* إخفاء سهم المتصفح الافتراضي */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23cda434" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 50px;
+}
+
+/* تنسيق نص الرسالة (Textarea) */
+.form-textarea {
+    resize: vertical; /* السماح بالتكبير الرأسي فقط */
+    min-height: 150px;
+}
+
+/* عداد الحروف ورسائل الخطأ */
+.char-counter {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+    margin-top: -15px;
+}
+
+.form-error {
+    color: #ff6b6b; /* لون أحمر هادئ للخطأ */
+    font-size: 0.8rem;
+    min-height: 1em;
+}
+
+/* --- 6. Buttons (الأزرار) --- */
+/* الزر الأساسي الذهبي */
+.btn--primary {
+    background-color: #cda434; /* خلفية ذهبية */
+    color: #111; /* نص داكن */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn--primary:hover {
+    background-color: #ffffff; /* يتحول للأبيض عند التمرير مثل الصورة */
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* --- 7. Responsive Design (التجاوب مع الشاشات) --- */
+
+/* للشاشات المتوسطة (Tablets) */
+@media (max-width: 991px) {
+    .page-hero__title {
+        font-size: 3rem;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr; /* عمود واحد للكروت */
+        gap: 20px;
+    }
+
+    .contact-form-card {
+        flex-direction: column; /* تحويل النموذج ليكون رأسي */
+    }
+
+    .contact-form-card__left {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        padding: 40px;
+    }
+
+    .contact-form-card__right {
+        padding: 40px;
+    }
+}
+
+/* للشاشات الصغيرة (Mobiles) */
+@media (max-width: 767px) {
+    #page-contact {
+        padding-top: 80px;
+    }
+
+    .page-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .contact-info-card, 
+    .contact-form-card__left, 
+    .contact-form-card__right {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        flex-direction: column; /* حقول الاسم والايميل فوق بعض */
+        gap: 25px;
+    }
+}

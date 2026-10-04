@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egyptian Museum - Quiz</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold gold-text d-flex align-items-center gap-2" href="../../index.html">
+          <div class="brand">
+            <span class="eye-icon">𓂀</span>
+          </div>
+          <span>EGYPTIAN MUSEUM</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../tarek/museum.html">Museum</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../rahmaaaaaaaaaaaaaaaaaaaaaaa/egypt explore/time line.html">Timeline</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../abdallh/project/map.html">Map</a></li>
+            <li class="nav-item" id="quizNavItem"><a class="nav-link active" href="quiz.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../abdallh/project/about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <!-- أزرار الزائر -->
+            <div id="authButtons" class="d-flex gap-2">
+              <!-- <a href="signin.html" class="btn btn-outline-gold btn-sm px-3">Sign In</a>
+              <a href="create_account.html" class="btn btn-gold btn-sm px-3">Create Account</a> -->
+            </div>
+
+            <!-- معلومات المستخدم المسجل -->
+            <div id="userInfo" class="d-none align-items-center gap-2">
+              <span class="text-warning fw-bold d-flex align-items-center gap-1 ms-2">
+                <i class="bi bi-person-fill fs-5"></i>
+                <span id="userNameDisplay"></span>
+              </span>
+              <button id="logoutBtn" class="btn btn-outline-danger btn-sm px-2">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- QUIZ CONTAINER -->
+    <main class="quiz-container container my-5 pt-5">
+  <div class="row justify-content-center pt-4">
+    <div class="col-lg-8">
+      <div class="quiz-card p-4 p-md-5 rounded-4 shadow-lg text-center">
+        
+        <!-- 1. شاشة البداية (Start Box) -->
+        <div id="startBox">
+          <i class="fa-solid fa-brain gold-icon display-1 mb-3"></i>
+          <h2 class="main-title text-uppercase gold-text mb-2">Ancient Egypt Quiz</h2>
+          <p class="text-light mb-4">Test your knowledge about Egyptian pharaohs and ancient history!</p>
+          <button id="startQuizBtn" class="btn btn-gold btn-lg px-5 py-3 fw-bold">Start Quiz</button>
+        </div>
+
+        <!-- 2. شاشة الأسئلة (Quiz Box - مخفية في البداية) -->
+        <div id="quizBox" class="d-none">
+          <div class="progress mb-4 bg-dark border border-warning" style="height: 10px;">
+            <div id="progressBar" class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3 text-muted small fw-bold">
+            <span id="questionCounter">Question 1 of 4</span>
+          </div>
+          <h4 id="questionText" class="mb-4 text-white fw-semibold"></h4>
+
+          <div id="answersContainer" class="d-flex flex-column gap-3 mb-4"></div>
+        </div>
+
+        <!-- 3. شاشة النتيجة (Result Box) -->
+        <div id="resultBox" class="d-none">
+          <div class="py-4">
+            <i class="fa-solid fa-trophy gold-icon display-1 mb-3"></i>
+            <h3 class="text-white mb-2">Quiz Completed!</h3>
+            <p class="fs-4 text-warning fw-bold mb-3">Your Score: <span id="finalScore">0</span> / <span id="totalQuestions">4</span></p>
+            <p id="feedbackMessage" class="text-muted mb-4"></p>
+            <button id="restartBtn" class="btn btn-gold px-4 py-2 fw-bold">Try Again</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+    <!-- FOOTER -->
+    <footer class="custom-footer py-4 text-center mt-auto">
+      <div class="container">
+        <hr class="gold-divider mb-4" />
+        <div class="footer-logo mb-2">
+          <span class="eye-icon">𓂀</span>
+          <span class="gold-text fw-bold ms-2">EGYPTIAN MUSEUM</span>
+        </div>
+        <p class="footer-text mb-0">
+          © 2026 EGYPTIAN MUSEUM. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+
+<!-- Auth Alert Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content quiz-card border-warning text-center p-3">
+      <div class="modal-header border-0 justify-content-end pb-0">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4">
+        <div class="mb-3">
+          <i class="fa-solid fa-lock gold-icon display-3"></i>
+        </div>
+        <h4 class="modal-title gold-text fw-bold mb-2" id="authModalLabel">Account Required</h4>
+        <p class="text-light fs-6 mb-4">
+          You need to sign in or create an account first to start the quiz and track your score!
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="signin.html" class="btn btn-gold px-4 py-2 fw-bold">Sign In</a>
+          <a href="create_account.html" class="btn btn-outline-gold px-4 py-2 fw-bold">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
