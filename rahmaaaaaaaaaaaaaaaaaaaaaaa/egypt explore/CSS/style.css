@@ -1,0 +1,263 @@
+/* ========== Variables ========== */
+:root {
+  --bg-dark: #14110D;
+  --bg-light: #fbf8f2;
+  --gold: #d4af37;
+  --gold-dark: #c8a24d;
+  --text-muted: #6c757d;
+  --text-dark: #333;
+}
+
+/* ========== General ========== */
+body {
+  background-color: var(--bg-light);
+  font-family: 'Georgia', serif;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Navbar ========== */
+.custom-navbar {
+  background: rgba(13, 11, 9, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.gold-text {
+  color: var(--gold) !important;
+  letter-spacing: 1px;
+}
+
+.eye-icon {
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.95rem;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--gold) !important;
+}
+
+/* ========== Hero Section ========== */
+.historical-timeline {
+  background: linear-gradient(rgba(20, 17, 13, 0.75), rgba(20, 17, 13, 0.75)),
+    url('../images/timeline-bg.jpg') center/cover no-repeat;
+  padding: 160px 20px 100px;
+  text-align: center;
+  color: white;
+}
+
+.historical-timeline h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.historical-timeline p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* ========== Timeline Section ========== */
+.timeline-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.timeline-header h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #2c1e12;
+}
+
+.ankh-icon {
+  font-size: 1.8rem;
+}
+
+/* ========== Timeline Container ========== */
+.timeline-container {
+  max-width: 1000px;
+  gap: 15px;
+}
+
+.timeline-track {
+  position: relative;
+  height: 80px;
+}
+
+.timeline-line {
+  height: 3px;
+  background-color: var(--gold);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* ========== Timeline Items ========== */
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.timeline-item .year {
+  position: absolute;
+  top: -32px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #888;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.timeline-item .label {
+  position: absolute;
+  bottom: -38px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #888;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.timeline-item .node {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid var(--gold);
+  transition: all 0.3s ease;
+}
+
+/* Active State */
+.timeline-item.active .node {
+  background-color: var(--gold);
+  transform: scale(1.4);
+  box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.25);
+}
+
+.timeline-item.active .year,
+.timeline-item.active .label {
+  color: var(--gold);
+}
+
+.timeline-item:hover .node {
+  transform: scale(1.25);
+}
+
+/* ========== Navigation Buttons ========== */
+.nav-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gold) !important;
+  border: none !important;
+  color: #1a1a1a !important;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.nav-btn:hover {
+  background-color: #b8962e !important;
+  transform: scale(1.08);
+}
+
+/* ========== Content Card ========== */
+.content-card-container {
+  max-width: 720px;
+  background-color: #fff;
+  border: 2px solid var(--gold) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.content-card-container h3 {
+  font-size: 1.35rem;
+}
+
+.content-card-container p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ========== Period Content Animation ========== */
+.period-content {
+  display: none;
+}
+
+.period-content.active {
+  display: block;
+  animation: fadeIn 0.45s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Bootstrap Overrides ========== */
+.btn-warning {
+  background-color: var(--gold) !important;
+  border-color: var(--gold) !important;
+}
+
+.border-warning {
+  border-color: var(--gold) !important;
+}
+
+.text-warning {
+  color: var(--gold) !important;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .historical-timeline {
+    padding: 130px 15px 70px;
+  }
+
+  .historical-timeline h1 {
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+  }
+
+  .timeline-item .year,
+  .timeline-item .label {
+    font-size: 0.65rem;
+  }
+
+  .timeline-item .label {
+    bottom: -32px;
+  }
+
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+}
